@@ -22,7 +22,7 @@
 
 GravityTDS::GravityTDS()
 {
-    this->pin = A1;
+    this->pin = pin;
     this->temperature = 25.0;
     this->aref = 5.0;
     this->adcRange = 1024.0;
@@ -30,8 +30,10 @@ GravityTDS::GravityTDS()
     this->kValue = 1.0;
 }
 
-GravityTDS::~GravityTDS()
+GravityTDS::~GravityTDS(int pin )
 {
+	this->pin = pin;
+
 }
 
 void GravityTDS::setPin(int pin)
