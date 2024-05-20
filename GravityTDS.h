@@ -25,7 +25,7 @@
 class GravityTDS
 {
 public:
-    GravityTDS();
+    GravityTDS(int pin);
     ~GravityTDS();
 
     void begin();  //initialization
